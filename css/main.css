@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Open-Sans&display=swap');
+
+:root {
+    --primary: #012970;
+    --secondary: #4154f1;
+    --orange: #ee6c20;
+    --green: #15be56;
+    --red: #bb0852;
+    --blue: #2db6fa;
+    --purple: #b50edf;
+    --pink: #f51f9c;
+    --white: #ffffff;
+    --grey: #444444;
+    --light-grey: #f2f5fc;
+    --font-family-h: 'Nunito', sans-serif;
+    --font-family-p: 'Open-sans', sans-serif;
+    --border-radius: 8px;
+    --box-shadow:1px 1px 30px -10px rgba(0, 0, 0, .7);
+}
+
+/***************** Reset CSS DEFAULT ***************/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/***************** STRUCTURE ***********************/
+
+html, 
+body {
+    scroll-behavior: smooth;
+    background: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-h);
+    margin-bottom: .5em;
+    line-height: 120%;
+}
+
+h1 {
+    color: var(--primary);
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.6em;
+    font-weight: initial;
+    color: var(--primary);
+}
+
+h3 {
+    font-size: 1em;
+    color: var(--secondary);
+    font-weight: lighter;
+}
+
+p {
+    color: var(--grey);
+    font-family: var(--font-family-p);
+    font-weight: lighter;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    transition: all .4s ease-in-out;
+    font-family: var(--font-family-h);
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    padding-top: 2em;
+}
+
+section:not(:first-child) {
+    margin: 2em auto;
+}
+
+p:not(:last-of-type), em {
+    margin-bottom: 1em;
+}
+
+em {
+    display: inline-block;
+}
+
+.btn {
+    padding: 1em 1.5em;
+    border-radius: var(--border-radius);
+    border: none;
+    color: var(--white);
+    transition: all .4s linear;
+}
+
+.btn i {
+    padding-left: .3em;
+}
+
+.btn:hover {
+    background-color: var(--primary);
+}
+
+.btn-primary {
+    background-color: var(--secondary);
+}
+
+img {
+    width: 100%;
+}
+
+/**************** HEADER ****************/
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    transition: all .4s ease-in-out;
+    padding: 1em 0;
+}
+
+.logo img {
+    width: inherit;
+}
+
+.logo span {
+    font-size: 2em;
+    color: var(--primary);
+    font-family: var(--font-family-h);
+    letter-spacing: 3px;
+    margin-left: .3em;
+}
+
+.nav-bg {
+    background: var(--white);
+    transition: .4s ease-in-out;
+    box-shadow: var(--box-shadow);
+}
+
+.nav-list ul {
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    gap: 0;
+    transform: scaleY(0);
+    transform-origin: top right;
+    transition: transform .4s ease;
+}
+
+.nav-list ul.open {
+    transform: scaleY(1);
+    background: var(--secondary);
+    margin-top: 1em;
+    border-radius: var(--border-radius);
+}
+
+.nav-list ul li {
+    padding: 1em;
+    color: var(--white);
+}
+
+.link-burger {
+    display: inline-block;
+    padding-bottom: .6em;
+}
+
+.link-burger.open .navbar-burger {
+    background: transparent;
+}
+
+
+.navbar-burger {
+    display: inline-block;
+    width: 25px;
+    height: 3px;
+    background: var(--secondary);
+    border-radius: 5px;
+    position: relative;
+    transition: all .4s ease;
+}
+
+.navbar-burger::before,
+.navbar-burger::after {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 3px;
+    background: var(--secondary);
+    border-radius: 5px;
+    position: absolute;
+    transition: all .4s ease;
+}
+
+.navbar-burger::before {
+    top: -8px;
+}
+
+.navbar-burger::after {
+    top: 8px;
+}
+
+.link-burger.open .navbar-burger::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.link-burger.open .navbar-burger::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+.btn-nav {
+    background: var(--primary);
+}
+
+@media screen and (min-width: 992px) {
+   .nav-list ul {
+    display: flex;
+    flex-direction: row;
+    position: inherit;
+    transform: none;
+   }
+
+   .nav-list ul li {
+    color: var(--primary);
+   }
+
+   .nav-list ul li a:hover {
+    color: var(--secondary);
+   }
+
+   .btn-nav {
+    background: var(--secondary);
+   }
+
+   .btn-nav:hover {
+    background: var(--primary);
+    color: var(--white) !important;
+   }
+   
+    .link-burger{
+        display: none;
+    }
+}
+
+/**************** BANNER *****************/
+.banner {
+    background: top center no-repeat url(../img/hero-bg.png);
+    background-size: cover;
+    text-align: center;
+}
+
+.banner-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin-top: 2em;
+}
+
+.banner-content-text {
+    margin-top: 5em;
+}
+
+.banner-content-text h2 {
+    color: var(--grey);
+}
+
+.banner-content-img img {
+    margin-top: 3em;
+}
+
+@media screen and (min-width: 992px) {
+    .banner {   
+        width: 100%;
+        text-align: start;
+        padding: 60px;
+    }
+
+    .banner-content {
+        flex-direction: row;
+    }
+
+    .banner-content-text {
+        width: 60%;
+    }
+
+    .banner-content-text h1 {
+        font-size: 3em;
+    }
+}
+
+/*************** ABOUT *****************/
+.about-content-desc {
+    background: var(--light-grey);
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+@media screen and (min-width: 992px) {
+    .about-content {
+        display: flex;
+    }
+
+    .about-content-desc {
+        width: 70%;
+        height: 30%;
+        margin-top: 4em;
+    }
+}
