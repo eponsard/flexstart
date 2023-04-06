@@ -557,10 +557,280 @@ header {
         width: 55%;
     }
 
+    .last-features-text-content {
+        margin-bottom: 0;
+    }
+
     .last-features-elements-text {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         margin: 4em;
         gap: 1.5em;
+    }
+}
+
+/*************** SERVICES *****************/
+.services-content {
+    text-align: center;
+}
+
+.services-elements {
+    margin-top: 5em;
+}
+
+.services-elements-card {
+    padding: 2em;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 2em;
+}
+
+.services-elements-card h2 {
+    color: #000;
+}
+
+.services-elements-card,
+.services-elements-card h2,
+.services-elements-card p {
+    transition: all .4s ease-in-out;
+}
+
+.services-elements-card:hover h2,
+.services-elements-card:hover p,
+.services-elements-card:hover .btn-card {
+    color: var(--white);
+}
+
+.services-elements-card i {
+    font-size: 2em;
+    padding: 0.7em;
+    margin-bottom: 1em;
+    border-radius: var(--border-radius);
+    transition: all .4s ease-in-out;
+}
+
+.services-elements-card:hover i {
+    background: var(--white);
+}
+
+.btn-card {
+    margin-top: 2em;
+}
+
+.btn-card i {
+    font-size: unset;
+    background: none !important;
+}
+
+.blue-card {
+    border-bottom: 5px solid var(--blue);
+}
+
+.blue-card i {
+    background: #d8f2ff;
+}
+
+.blue-card,
+.btn-blue {
+    color: var(--blue);
+}
+
+.blue-card:hover {
+    background: var(--blue);
+}
+
+.orange-card {
+    border-bottom: 5px solid var(--orange);
+}
+
+.orange-card i {
+    background: #ffe1d0;
+}
+
+.orange-card,
+.btn-orange {
+    color: var(--orange);
+}
+
+.orange-card:hover {
+    background: var(--orange);
+}
+
+.green-card {
+    border-bottom: 5px solid var(--green);
+}
+
+.green-card i {
+    background: #b1ffcf;
+}
+
+.green-card,
+.btn-green {
+    color: var(--green);
+}
+
+.green-card:hover {
+    background: var(--green);
+}
+
+.red-card {
+    border-bottom: 5px solid var(--red);
+}
+
+.red-card i {
+    background: #ffc3dc;
+}
+
+.red-card,
+.btn-red {
+    color: var(--red);
+}
+
+.red-card:hover {
+    background: var(--red);
+}
+
+.purple-card {
+    border-bottom: 5px solid var(--purple);
+}
+
+.purple-card i {
+    background: #f2bcff;
+}
+
+.purple-card,
+.btn-purple {
+    color: var(--purple);
+}
+
+.purple-card:hover {
+    background: var(--purple);
+}
+
+.pink-card {
+    border-bottom: 5px solid var(--pink);
+}
+
+.pink-card i {
+    background: #ffc0e5;
+}
+
+.pink-card,
+.btn-pink {
+    color: var(--pink);
+}
+
+.pink-card:hover {
+    background: var(--pink);
+}
+
+@media screen and (min-width: 992px) {
+    .services-elements {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2em;
+    }
+}
+
+/************ PRICING *****************/
+.pricing-content {
+    text-align: center;
+}
+
+.pricing-elements-card {
+    background: var(--white);
+    box-shadow: var(--box-shadow);
+    padding: 3em;
+    margin-top: 3em;
+    transition: all .4s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing-elements-card:hover {
+    transform: scale(1.1);
+}
+
+.pricing-elements-card h3 {
+    margin-bottom: 2em;
+    font-weight: bold;
+}
+
+.turquoise-title {
+    color: #07d5c0;
+}
+
+.green-title {
+    color: var(--green);
+}
+
+.orange-title {
+    color: var(--orange);
+}
+
+.pink-title {
+    color: var(--pink);
+}
+
+.pricing-elements-card p {
+    color: var(--grey);
+}
+
+.pricing-elements-card span {
+    color: #000;
+    font-size: 2em;
+    margin-top: 0em;
+    font-weight: bold;
+    padding: .1em;
+}
+
+.pricing-elements-card-img {
+    margin-top: 1em;
+}
+
+.pricing-elements-card-desc {
+    margin: 1em auto;
+}
+
+.pricing-elements-card-desc .disable {
+    color: var(--light-grey);
+}
+
+.btn-pricing {
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+    border-radius: 50px;
+    padding: .7em 0;
+    width: 70%;
+    margin: auto;
+    transition: all .4s ease-in-out;
+}
+
+.btn-pricing:hover {
+    background: var(--secondary);
+    color: var(--white);
+}
+
+.featured {
+    width: 200px;
+    position: absolute;
+    top: 18px;
+    right: -68px;
+    transform: rotate(45deg);
+    z-index: 1;
+    font-family: var(--font-family-p);
+    font-weight: lighter;
+    font-size: 14px !important;
+    padding: 10px 0 3px 0 !important;
+    background: #4154f1;
+    color: #fff !important;
+}
+
+@media screen and (min-width: 992px) {
+    .pricing-elements {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2em;
     }
 }
