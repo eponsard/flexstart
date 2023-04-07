@@ -117,6 +117,18 @@ img {
     width: 100%;
 }
 
+.card {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 1.5em;
+}
+
+.slider-nav {
+    color: var(--secondary);
+    margin: 1.5em;
+    text-align: center;
+}
 /**************** HEADER ****************/
 header {
     display: flex;
@@ -128,7 +140,7 @@ header {
     left: 0;
     z-index: 999;
     transition: all .4s ease-in-out;
-    padding: 1em 0;
+    padding: .5em;
 }
 
 .logo img {
@@ -212,6 +224,10 @@ header {
 
 .navbar-burger::after {
     top: 8px;
+}
+
+.active {
+    color: var(--secondary);
 }
 
 .link-burger.open .navbar-burger::before {
@@ -336,11 +352,7 @@ header {
 }
 
 .values-content-card {
-    background: var(--white);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
     padding: 2em;
-    margin-bottom: 1.5em;
 }
 
 .values-content-card-img {
@@ -426,9 +438,6 @@ header {
 }
 
 .features-elements-cards {
-    background: var(--white);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
     margin-top: 3em;
     padding: 1.8em;
 }
@@ -580,9 +589,6 @@ header {
 
 .services-elements-card {
     padding: 2em;
-    background: var(--white);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
     margin-bottom: 2em;
 }
 
@@ -739,8 +745,6 @@ header {
 }
 
 .pricing-elements-card {
-    background: var(--white);
-    box-shadow: var(--box-shadow);
     padding: 3em;
     margin-top: 3em;
     transition: all .4s ease-in-out;
@@ -832,5 +836,208 @@ header {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 2em;
+    }
+}
+
+/**************** FAQ ******************/
+.faq-content {
+    text-align: center;
+    margin-top: 5em;
+}
+
+.faq-elements {
+    display: flex;
+    justify-content: space-between;
+    text-align: start;
+    margin: 2em auto;
+    padding-bottom: 1em;
+    width: 95%;
+}
+
+.faq-elements:not(:last-child) {
+    border-bottom: 2px solid var(--light-grey);
+}
+
+.faq-elements p {
+    font-weight: bold;
+}
+
+@media screen and (min-width: 992px) {
+    .faq-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1em;
+    }
+}
+
+/*************** PORTFOLIO *****************/
+.portfolio-content {
+    text-align: center;
+    margin-top: 5em;
+}
+
+.btn-onglets {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: 2em auto;
+    align-items: center;
+}
+
+.active-btn {
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+    padding: .5em 1em;
+    border-radius: 50px;
+}
+
+.btn-onglets a:hover {
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+    padding: .5em 1em;
+    border-radius: 50px;
+}
+
+.portfolio-img img {
+    margin-bottom: 1em;
+    transition: all .4s ease-in-out;
+}
+
+.portfolio-img img:hover {
+    opacity: .5;
+}
+
+@media screen and (min-width: 992px) {
+    .portfolio-img {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1em;
+    }
+}
+
+/************** TESTIMONIALS ****************/
+.testimonials-content {
+    text-align: center;
+    margin-top: 5em;
+}
+
+.testimonials-elements {
+    margin-top: 3em;
+}
+
+.testimonials-elements-card {
+    padding: 1em;
+}
+
+.testimonials-note {
+    margin: 1em;
+    color: gold;
+}
+
+.testimonials-card-img {
+    width: 35%;
+    margin: 1em auto;
+  }
+
+.testimonials-card-img img {
+    border-radius: 50%;
+}
+
+.card-desktop {
+    display: none;
+}
+
+@media screen and (min-width: 992px) {
+    .testimonials-elements {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1em;
+    }
+
+    .card-desktop {
+        display: block;
+        opacity: .3;
+    }
+}
+
+/************** TEAM *****************/
+.team-content {
+    text-align: center;
+    margin-top: 5em;
+}
+
+.team-elements-card {
+    margin: 3em auto;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: all .4s ease-in-out;
+}
+
+.team-elements-card:hover {
+    transform: scale(1.1);
+}
+
+.team-card-img {
+    position: relative;
+}
+
+.team-card-design img {
+    position: absolute;
+    bottom: 1.5%;
+    right: 0;
+}
+
+.team-card-text {
+    margin-top: 1em;
+    padding: 1em;
+}
+
+.team-card-text span {
+    font-family: var(--font-family-h);
+    color: var(--grey);
+}
+
+.team-card-text p {
+    margin-top: 1em;
+}
+
+@media screen and (min-width: 992px) {
+    .team-elements {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2em;
+    }
+}
+
+/********************* CLIENTS **********************/
+.clients-content {
+    text-align: center;
+    margin-top: 5em;
+}
+
+.clients-logo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+    opacity: 0.4;
+    width: 80%;
+    margin: 2em auto;
+}
+
+.clients-logo-desktop {
+    display: none;
+}
+
+@media screen and (min-width: 992px) {
+    .clients-logo {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .clients-logo img {
+         width: 70%;
+    }
+
+    .clients-logo-desktop {
+        display: block;
     }
 }
