@@ -93,6 +93,11 @@ em {
     display: inline-block;
 }
 
+.content {
+    text-align: center;
+    margin-top: 5em;
+}
+
 .btn {
     padding: 1em 1.5em;
     border-radius: var(--border-radius);
@@ -344,10 +349,6 @@ header {
 }
 
 /************** VALUES *****************/
-.values-content {
-    text-align: center;
-}
-
 .values-content-elements {
     margin-top: 3em;
 }
@@ -430,10 +431,6 @@ header {
 }
 
 /************* FEATURES ****************/
-.features-content {
-    text-align: center;
-}
-
 .features-elements {
     margin-top: 2em;
 }
@@ -580,10 +577,6 @@ header {
 }
 
 /*************** SERVICES *****************/
-.services-content {
-    text-align: center;
-}
-
 .services-elements {
     margin-top: 5em;
 }
@@ -741,10 +734,6 @@ header {
 }
 
 /************ PRICING *****************/
-.pricing-content {
-    text-align: center;
-}
-
 .pricing-elements-card {
     padding: 3em;
     margin-top: 3em;
@@ -841,11 +830,6 @@ header {
 }
 
 /**************** FAQ ******************/
-.faq-content {
-    text-align: center;
-    margin-top: 5em;
-}
-
 .faq-elements {
     display: flex;
     justify-content: space-between;
@@ -872,11 +856,6 @@ header {
 }
 
 /*************** PORTFOLIO *****************/
-.portfolio-content {
-    text-align: center;
-    margin-top: 5em;
-}
-
 .btn-onglets {
     display: flex;
     justify-content: space-between;
@@ -917,11 +896,6 @@ header {
 }
 
 /************** TESTIMONIALS ****************/
-.testimonials-content {
-    text-align: center;
-    margin-top: 5em;
-}
-
 .testimonials-elements {
     margin-top: 3em;
 }
@@ -962,11 +936,6 @@ header {
 }
 
 /************** TEAM *****************/
-.team-content {
-    text-align: center;
-    margin-top: 5em;
-}
-
 .team-elements-card {
     margin: 3em auto;
     border-radius: var(--border-radius);
@@ -1011,11 +980,6 @@ header {
 }
 
 /********************* CLIENTS **********************/
-.clients-content {
-    text-align: center;
-    margin-top: 5em;
-}
-
 .clients-logo {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1044,11 +1008,6 @@ header {
 }
 
 /************** BLOG ********************/
-.blog-content {
-    text-align: center;
-    margin-top: 5em;
-}
-
 .blog-card-img {
     overflow: hidden;
 }
@@ -1075,6 +1034,10 @@ header {
     margin-bottom: 1em;
 }
 
+.blog-card-text h2 {
+    font-size: 1.5em;
+}
+
 .btn-blog {
     text-align: start;
     margin: 0;
@@ -1091,5 +1054,79 @@ header {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 2em;
+    }
+}
+
+/**************** CONTACT *****************/
+.contact-infos-card {
+    background: var(--light-grey);
+    padding: 2em;
+    margin-bottom: 2em;
+    text-align: start;
+}
+
+.contact-infos-card i {
+    font-size: 3em;
+    color: var(--secondary);
+    margin-bottom: .5em;
+}
+
+.contact-form {
+    background: var(--light-grey);
+    padding: 4em;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 2em;
+    padding: .8em;
+    width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+    .contact-elements,
+    .contact-infos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2em;
+    }
+
+    .contact-infos-card {
+        margin-bottom: 0;
+    }
+}
+
+/**************** NEWSLATTER *******************/
+.news {
+    background: var(--light-grey);
+    padding: 3em;
+    margin-top: 5em;    
+}
+
+.news-input {
+    margin-top: 2em;
+    position: relative;
+}
+
+.news-input input {
+    padding: .8em;
+    width: 100%;
+}
+
+.news-input a {
+    padding: 0.7em 1em;
+    position: absolute;
+    right: 0;
+    top: 3%;
+}
+
+@media screen and (min-width: 992px) {
+    .news-input input{
+        padding: .8em;
+        width: 50%;
+    }
+
+    .news-input a {
+        right: 25%;
     }
 }
